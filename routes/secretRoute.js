@@ -31,7 +31,7 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   Secret.findByIdAndDelete(req.params.id)
     .then(result => res.send(result))
-    .catch(error => res.status(400).send(erro));
+    .catch(error => res.status(400).send(error));
 });
 
 module.exports = router;
